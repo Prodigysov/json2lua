@@ -22,7 +22,7 @@ namespace json2lua {
 	{
 		static_assert(check<CallbacksClass>());
 		
-		const unsigned char bracket_close_and_equal_sign[] = { u8']', u8'=' };
+		const char bracket_close_and_equal_sign[] = { u8']', u8'=' };
 		
 		cbo.write(u8'{');
 		

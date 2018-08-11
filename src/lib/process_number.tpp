@@ -17,9 +17,9 @@ namespace json2lua {
 	{
 		static_assert(check<CallbacksClass>());
 		
-		const unsigned char zero_comma[2] = { u8'0', u8'.' };
+		const char zero_comma[2] = { u8'0', u8'.' };
 		
-		unsigned char c;
+		char c;
 		
 		ends = ensure_input(ends, cbo);
 		

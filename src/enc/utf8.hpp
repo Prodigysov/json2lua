@@ -3,7 +3,7 @@
 
 const char32_t * decode_utf8
 (
- const unsigned char *,
+ const char *,
  std::size_t,
  char32_t *
 ) noexcept;
@@ -11,5 +11,5 @@ const char32_t * decode_utf8
 std::size_t encode_utf8
 (
  char32_t,
- unsigned char[4]
+ char[4]
 ) noexcept;

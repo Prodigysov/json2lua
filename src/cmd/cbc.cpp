@@ -10,7 +10,7 @@ json2lua::pointer_pair<char32_t>
 cbc::read
 ( )
 {
-	unsigned char buffer[buffer_size];
+	char buffer[buffer_size];
 	
 	const auto input = this->input;
 	const auto code_points = this->buffer;

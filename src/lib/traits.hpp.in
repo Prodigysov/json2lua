@@ -17,9 +17,9 @@ namespace json2lua
 		static constexpr bool noexcept_read =
 			noexcept(std::declval<CallbacksClass>().read());
 		static constexpr bool noexcept_write_c =
-			noexcept(std::declval<CallbacksClass>().write(static_cast<const unsigned char *>(nullptr), static_cast<std::size_t>(0)));
+			noexcept(std::declval<CallbacksClass>().write(static_cast<const char *>(nullptr), static_cast<std::size_t>(0)));
 		static constexpr bool noexcept_write_s =
-			noexcept(std::declval<CallbacksClass>().write(static_cast<unsigned char>(0)));
+			noexcept(std::declval<CallbacksClass>().write(static_cast<char>(0)));
 		static constexpr bool noexcept_write =
 			noexcept_write_c && noexcept_write_s;
 		static constexpr bool noexcept_encode =

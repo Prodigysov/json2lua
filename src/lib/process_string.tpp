@@ -12,13 +12,13 @@ namespace json2lua {
 	void
 	output_code_unit
 	(
-	 const unsigned char code_unit,
+	 const char code_unit,
 	 CallbacksClass & cbo
 	)
 	noexcept( traits<CallbacksClass>::noexcept_write_s )
 	{
-		unsigned char output[4] = { u8'\\', u8'0', u8'0', u8'0' };
-		unsigned char * output_p = output + sizeof(output) - 1;
+		char output[4] = { u8'\\', u8'0', u8'0', u8'0' };
+		char * output_p = output + sizeof(output) - 1;
 		std::div_t result;
 		
 		result.quot = code_unit;
@@ -38,12 +38,12 @@ namespace json2lua {
 	void
 	write_escaped_char
 	(
-	 const unsigned char code_point,
+	 const char code_point,
 	 CallbacksClass & cbo
 	)
 	noexcept( traits<CallbacksClass>::noexcept_write_s )
 	{
-		const unsigned char output[] = { u8'\\' , code_point };
+		const char output[] = { u8'\\' , code_point };
 		
 		cbo.write(output, sizeof(output));
 	}
@@ -57,7 +57,7 @@ namespace json2lua {
 	 const char32_t code_point,
 	 CallbacksClass & cbo
 	)
-	noexcept( traits<CallbacksClass>::noexcept_encode && traits<CallbacksClass>::noexcept_write_c && noexcept(output_code_unit(static_cast<unsigned char>(0), cbo)) )
+	noexcept( traits<CallbacksClass>::noexcept_encode && traits<CallbacksClass>::noexcept_write_c && noexcept(output_code_unit(static_cast<char>(0), cbo)) )
 	{
 		auto ends = cbo.encode_string_code_point(code_point);
 		

@@ -18,8 +18,8 @@ namespace json2lua {
 	{
 		static_assert(check<CallbacksClass>());
 		
-		const unsigned char null_str[] = { u8'n', u8'u', u8'l', u8'l' };
-		const unsigned char nil_str[] = { u8'n', u8'i', u8'l' };
+		const char null_str[] = { u8'n', u8'u', u8'l', u8'l' };
+		const char nil_str[] = { u8'n', u8'i', u8'l' };
 		
 		ends = seqcmp(ends, null_str, cbo);
 		

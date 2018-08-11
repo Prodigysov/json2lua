@@ -54,7 +54,7 @@ namespace {
 
 const char32_t * decode_utf8
 (
- const unsigned char * buffer,
+ const char * buffer,
  std::size_t read,
  char32_t * output
 )
@@ -79,7 +79,7 @@ noexcept
 std::size_t encode_utf8
 (
  const char32_t code_point,
- unsigned char p[4]
+ char p[4]
 )
 noexcept
 {

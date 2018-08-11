@@ -18,7 +18,7 @@ namespace json2lua {
 	{
 		static_assert(check<CallbacksClass>());
 		
-		const unsigned char true_str[] = { u8't', u8'r', u8'u', u8'e' };
+		const char true_str[] = { u8't', u8'r', u8'u', u8'e' };
 		
 		ends = seqcmp(ends, true_str, cbo);
 		
